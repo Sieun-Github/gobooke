@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "334119704494",
+    "project_id": "gobooke",
+    "storage_bucket": "gobooke.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334119704494:android:291f9113c9b38975f25a3f",
+        "android_client_info": {
+          "package_name": "com.sieun.gobooke.gobooke"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi-vJReQ4PZIikR8mMhxdDL6Xpmza8IhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gobooke/src/imsi/detail.dart';
-import 'package:gobooke/src/imsi/home.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -17,16 +15,7 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
     router = GoRouter(
-      routes: [
-        GoRoute(
-          path: '/',
-          builder: (context, state) => const Home(),
-        ),
-        GoRoute(
-          path: '/detail',
-          builder: (context, state) => const Detail(),
-        ),
-      ],
+      routes: [],
       initialLocation: '/',
     );
     //route
@@ -35,9 +24,14 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerDelegate: router.routerDelegate,
-      routeInformationProvider: router.routeInformationProvider,
-      routeInformationParser: router.routeInformationParser,
+      routerConfig: router,
+      theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+            backgroundColor: const Color(0xff1C1C1C),
+            titleTextStyle: TextStyle(color: Colors.white),
+          ),
+          scaffoldBackgroundColor: const Color(0xff1C1C1C)),
     );
   }
 }
