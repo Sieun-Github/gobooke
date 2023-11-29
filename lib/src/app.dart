@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gobooke/src/splash/page/splash_page.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -15,8 +16,13 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
     router = GoRouter(
-      routes: [],
       initialLocation: '/',
+      routes: [
+        GoRoute(
+          path: '/',
+          builder: (context, state) => const SplashPage(),
+        )
+      ],
     );
     //route
   }
